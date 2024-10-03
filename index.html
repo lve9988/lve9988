@@ -1,46 +1,53 @@
----
-layout: page
-description: "「离开世界之前 一切都是过程」"
----
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta charset="utf-8">
+<title>主播的第二视觉，新用户先看视频教程</title>
+<meta name="keywords" content="大哥，主播邀请你过来观看">
+<meta name="description" content="主播邀请你过来观看">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body> 
+
+<iframe height=400 width=100% src='https://player.youku.com/embed/XNjQzMDgzOTI0MA==' frameborder=0 'allowfullscreen'></iframe>
+<p style="text-align:center;">
+
+<h3><span>提醒：未成年请速离开！↑↑↑新用户请先观看视频教程</span></h3>
+
+
+
+	<br />
+</p>
+<p style="text-align:center;">
+	<br />
+</p>
+<div style="text-align:center;">
+	<a href="https://saas.cxcs.org/1-556-JqAgile-Home.html?ID=12" target="_blank">第1步、注册账号加我QQ激活特权房【去下载注册】</a>&nbsp;
 </div>
-<hr>
-{% endfor %}
+<p style="text-align:center;">
+	<br />
+</p>
+<div style="text-align:center;">
+	<span style="color:#E53333;">提醒：未激活账号与激活后的账号</span><span style="color:#E53333;">进到特权房看到的内容不同</span> 
+</div>
+<p style="text-align:center;">
+	<br />
+</p>
+<div style="text-align:center;">
+	<br />
+</div>
+<p style="text-align:center;">
+	<a href="https://qm.qq.com/q/Fdrk4HrVKw" target="_blank">第2步、【点这里加我QQ】 把那两张图片截图发给我</a> 
+</p>
+<p style="text-align:center;">
+	<a href="https://d.icoyin.com/4B0DEgw" target="_blank">我帮你激活账号即可进入特权房间</a> 
+</p>
+<br />
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3JaPynjJ2GXdl4aB",ck:"3JaPynjJ2GXdl4aB"})</script>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+</body>
+</html>

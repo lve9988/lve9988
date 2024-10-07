@@ -8,32 +8,86 @@
 <meta name="keywords" content="大哥，主播邀请你过来观看">
 <meta name="description" content="主播邀请你过来观看">
 <link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+<script src="https://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<style>
+.copyde {
+	background-color:#229ffd;
+	border:1px solid #229ffd;
+	font-size:12px;
+	height:30px;
+	line-height:30px;
+}
+#copycopy {
+	margin:30px;
+	color:red;
+}
+#copytwo {
+	width:140px;
+	height:25px;
+}
+#copy {
+	height:30px;
+	font-size:13px;
+}
+#copyhide {
+	margin-top:5px;
+	border:1px solid #229ffd;
+	width:300px;
+	height:150px;
+	background-color:white;
+}
+</style>
+
 </head>
 <body> 
 
-<div style="text-align:center;"><iframe height=75% width=100% src='https://player.youku.com/embed/XNjQzNDYxNDA1Ng==' frameborder=0 'allowfullscreen'></iframe></div>
+<div style="text-align:center;"><iframe height=65% width=100% src='https://player.youku.com/embed/XNjQzNDYxNDA1Ng==' frameborder=0 'allowfullscreen'></iframe></div>
 <p style="text-align:center;">
 
 <h3><span><marquee>提醒：未成年请速离开！↑↑↑请先观看视频了解专场直播，部分手机有广告，请耐心看完</marquee></span></h3>
 
+<center>
+    <div class="top">
+        <input type="button" value="点击这里添加主播QQ" class="copyde">
+        <input type="button" value="点击关闭" class="copyde" hidden="hidden">
+        <div id="copyhide">
+            <p id="copyone" hidden="hidden">2176882966</p>
+            <!--初始值可直接填写后台获取的数据拼接--${}-->
+            <p id="copycopy">点击复制主播QQ，方便添加</p>
+            <input id="copytwo" type="text" style="margin-left: 10px;width: 200px;">
+            <input type="button" value="复制" id="copy">
+        </div>
+    </div>
+</center>
 
+<script>
+$(function() {
+    $("#copyhide").hide();
+    $("#copyone").hide();
+    $(".copyde").eq(0).click(function() {
+        $(".copyde").eq(1).show();
+        $(".copyde").eq(0).hide();
+    });
+    $(".copyde").eq(1).click(function() {
+        $(".copyde").eq(0).show();
+        $(".copyde").eq(1).hide();
+    });
+    $(".copyde").click(function() {
+        $("#copyhide").toggle();
+        var c = document.getElementById("copyone");
+        var b = c.innerHTML;
+        $("#copytwo").val(b);
+    });
+    $("#copy").click(function() {
+        var Url = document.getElementById("copytwo");
+        Url.select();
+        document.execCommand("Copy");
+        alert("复制成功！去QQ上添加好友。");
+    })
+});
+</script>
 
-	
-
-<style>
-/**/
-.foot_content{display:none;}
-@media(max-width: 1200px) {
-.foot_content{display:flex;position:fixed;bottom:0px;left:0px;width:100%;text-align:center;z-index:9999;background:#fff;}
-.foot_content a{text-decoration:none;}
-.foot_content .foot_item{border-right:1px solid #eee;border-top:1px solid #eee;flex:1;height:100px;padding-top:3px;padding-bottom:4px;}
-.foot_content .foot_item img{padding:0;width:56%;height:auto;max-width:30px;}
-.foot_content .foot_item p{padding:0;margin:0;color:#ff0000;font-size:23px;}
-}
-</style>
-<div class="foot_content">
-<div class="foot_item"><a href="/wx/fl17098.png" target="_blank"><img src="/indexpic.png"><p>添加主播微信好友</p></a></div>
-</div>
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"3JaPynjJ2GXdl4aB",ck:"3JaPynjJ2GXdl4aB"})</script>
 
